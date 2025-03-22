@@ -49,6 +49,8 @@ macro_rules! checker {
 pub mod clone_iterator_of_eq;
 /// Checks combination of `Clone + Eq`.
 pub mod clone_eq;
+/// Checks that `Debug` is not empty.
+pub mod debug;
 /// Checks reflexivity.
 pub mod eq;
 /// Checks that for equal values equal bytes are given to a hasher.
@@ -106,6 +108,7 @@ macro_rules! standard_checks {
                     $type,
                     clone_iterator_of_eq,
                     clone_eq,
+                    debug,
                     eq,
                     eq_hash,
                     exact_size_iterator,
